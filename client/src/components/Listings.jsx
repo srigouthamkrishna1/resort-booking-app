@@ -18,8 +18,8 @@ const Listings = () => {
     try {
       const response = await fetch(
         selectedCategory !== "All"
-          ? `http://localhost:3001/properties?category=${selectedCategory}`
-          : "http://localhost:3001/properties",
+          ? `https://resort-booking-app-icek.onrender.com/properties?category=${selectedCategory}`
+          : "https://resort-booking-app-icek.onrender.com/properties",
         {
           method: "GET",
         }
@@ -67,7 +67,7 @@ const Listings = () => {
               category,
               type,
               price,
-              booking=false
+              booking = false
             }) => (
               <ListingCard
                 listingId={_id}

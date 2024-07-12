@@ -16,7 +16,7 @@ const LoginPage = () => {
     e.preventDefault()
 
     try {
-      const response = await fetch ("http://localhost:3001/auth/login", {
+      const response = await fetch("https://resort-booking-app-icek.onrender.com/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -28,7 +28,7 @@ const LoginPage = () => {
       const loggedIn = await response.json()
 
       if (loggedIn) {
-        dispatch (
+        dispatch(
           setLogin({
             user: loggedIn.user,
             token: loggedIn.token
